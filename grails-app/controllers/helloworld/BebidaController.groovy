@@ -4,7 +4,7 @@ import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
 class BebidaController {
-
+    String nomeDaFuncionalidade = "Bebidas"
     BebidaService bebidaService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

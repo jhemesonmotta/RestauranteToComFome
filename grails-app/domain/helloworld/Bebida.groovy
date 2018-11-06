@@ -1,6 +1,6 @@
 package helloworld
 
-class Bebida {
+class Bebida{
 
     double liquido
     String unidade

@@ -7,6 +7,8 @@ class Pedido {
     
     Cliente ciente
     
+    static hasMany = [itens: ItemPedido]
+    
     static constraints = {
     }
 }

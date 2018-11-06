@@ -6,6 +6,11 @@ class ItemPedido {
     double valorVenda
     String observacao
     
+    Produto produto
+    Pedido pedido
+    
+    static belongsTo = [Pedido]
+    
     static constraints = {
     }
 }

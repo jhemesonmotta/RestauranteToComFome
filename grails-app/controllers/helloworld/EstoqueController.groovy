@@ -4,7 +4,6 @@ import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
 class EstoqueController {
-    String nomeDaFuncionalidade = "Estoque"
     EstoqueService estoqueService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

@@ -4,7 +4,6 @@ import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
 class PratoController {
-    String nomeDaFuncionalidade = "Pratos"
     PratoService pratoService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]

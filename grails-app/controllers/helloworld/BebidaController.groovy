@@ -4,7 +4,6 @@ import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
 class BebidaController {
-    String nomeDaFuncionalidade = "Bebidas"
     BebidaService bebidaService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -19,17 +18,31 @@ class BebidaController {
     }
 
     def create() {
-        respond new Bebida(params)
+        System.out.println("entrou 2")
+        System.out.println("params " + params.toString())
+        Bebida novaBebida = new Bebida(params)
+        System.out.println("novs - " + novaBebida.toString())
+        respond novaBebida 
     }
 
     def save(Bebida bebida) {
+        System.out.println("\n")
+        System.out.println("\n")
+        System.out.println("\n")
+        System.out.println("check 1")
+        System.out.println("bebida: " + bebida.toString())
         if (bebida == null) {
             notFound()
             return
         }
+        
+        System.out.println("check 2")
+
 
         try {
+            System.out.println("check 3")
             bebidaService.save(bebida)
+            System.out.println("check 4")
         } catch (ValidationException e) {
             respond bebida.errors, view:'create'
             return

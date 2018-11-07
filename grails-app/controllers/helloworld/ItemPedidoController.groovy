@@ -4,7 +4,6 @@ import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
 class ItemPedidoController {
-    String nomeDaFuncionalidade = "Itens de Pedidos"
     ItemPedidoService itemPedidoService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
